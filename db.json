@@ -1,0 +1,19 @@
+{
+  "usuarios":[
+    {
+      "id":1,
+      "email":"Manuelosma2011@gmail.com",
+      "username":"manuelosma"
+    },
+    {
+      "id":2,
+      "email":"Manuelosmagenial@gmail.com",
+      "username":"manuelosma201"
+    },
+    {
+      "id":3,
+      "email":"milenasanchez@gmail.com",
+      "username":"MIlenaffre"
+    }
+  ]
+}

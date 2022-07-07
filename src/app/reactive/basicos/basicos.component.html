@@ -1,0 +1,54 @@
+<h2>Reactivos: Basicos</h2>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <form autocomplete="off" (ngSubmit)="guardar()" [formGroup]="miFormulario">
+      <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Producto</label>
+        <div class="col-sm-9">
+          <input formControlName="nombre" type="text" form-control minlength="3" />
+          <span *ngIf="campoNoEsValido('nombre') " class="form-text text-danger">Debe de ser de 3 letras</span>
+        </div>
+      </div>
+
+      <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Precio</label>
+        <div class="col-sm-9">
+          <input type="number" form-control formControlName="precio" />
+        </div>
+      </div>
+
+      <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Existencias</label>
+        <div class="col-sm-9">
+          <input type="number" form-control formControlName="existencias" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <button  type="submit" class="btn btn-primary float-end">
+            Guardar
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <span>Valid</span>
+    <pre>{{ miFormulario.valid }}</pre>
+
+    <span>Valor</span>
+    <pre>{{ miFormulario.value | json }}</pre>
+
+    <span>Pristine</span>
+    <pre>{{ miFormulario.pristine }}</pre>
+
+    <span>Touched</span>
+    <pre>{{ miFormulario.touched }}</pre>
+  </div>
+</div>
